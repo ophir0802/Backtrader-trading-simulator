@@ -16,9 +16,12 @@ __pycache__/
 *.ipynb_checkpoints/
 .DS_Store
 Thumbs.db
-
+**/*.csv
 # Data cache for simulation
 src/data_cache/
 simulation/data_cache/
 data_cache/
 **/data_cache/
+#data 
+data/
+snp500_data/

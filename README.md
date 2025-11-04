@@ -1,14 +1,23 @@
 # AlgoTrading Project
 
-פרויקט אלגו-טריידינג לבחינת אסטרטגיות מסחר מבוססות דאטה.
-כולל קוד לפנייה ל-Yahoo Finance ו-Investing.com.
 
-## מבנה הפרויקט
+## Description
 
-- `src/` – קוד המקור
-- `data/` – קבצים שמכילים נתוני מניות
+This project assumes historical market data is stored in a PostgreSQL database (accessible via the `DATABASE_URL` environment variable). The dataset consists of daily OHLCV for S&P 500 index and constituent stocks. The repository provides:
 
-## התקנה
+- A set of reusable indicators and market‑regime utilities
+- A strategy layer designed for quick iteration (plug‑and‑play parameters and components)
+- A simple, reproducible way to evaluate strategies across chosen time windows (train/validation/test)
+
+The goal is to make it easy to implement new ideas rapidly, test them over realistic market periods, and assess whether a strategy is robust rather than overfitted.
+
+## Assumptions
+
+- `src/` – source code
+- `data/` – stock data files
+-  `env` holds postGres url namer "DATABASE_URL"
+
+## Installation
 
 ```bash
 python -m venv Algo_env
