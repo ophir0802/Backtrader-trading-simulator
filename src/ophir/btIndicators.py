@@ -14,7 +14,7 @@ class BetaIndex(bt.Indicator):
         ('period', 360),
         ('short_window', 20),
         ('func', lambda b_up, b_down, n_up, n_down, p: 
-                 (n_up * b_up - n_down * b_down) / p if p > 0 else 0.0),
+                 (n_up * b_up - n_down**3 * b_down) / p if p > 0 else 0.0),
     )
     def __init__(self):
         super().__init__()
@@ -73,4 +73,18 @@ class BetaIndex(bt.Indicator):
         final_index = self.p.func(beta_up, beta_down, n_up, n_down, period)
         
         return beta_up, beta_down, final_index
+    
+    
+class ScoreIndicator(bt.Indicator):
+    lines = ('score',)          # indicator outputs one line
+    params = ()                 # no params needed
+
+    def __init__(self):
+        # wire the feed’s score line straight through
+        self.lines.score = self.data.score
+        self.addminperiod(1)    # indicator is valid from bar 0
+        
+
+
+    
 

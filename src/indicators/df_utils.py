@@ -58,7 +58,7 @@ def count_symbols(dataframe: pd.DataFrame) -> int:
 #     # Create a copy to avoid SettingWithCopyWarning
 #     df_copy = df.copy()
 #     if 'date' not in df_copy.columns:
-#         df_copy = df_copy.reset_index()  # מחזיר את האינדקס כעמודה 'date'
+#         df_copy = df_copy.reset_index()  # return index as a 'date' column
 #     # --- Step 1: Convert all date inputs to datetime objects ---
 #     # Convert the string dates from the function arguments
 #     # dayfirst=True correctly interprets formats like '1.1.2013'

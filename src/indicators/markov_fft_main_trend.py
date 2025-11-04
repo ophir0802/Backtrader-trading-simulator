@@ -4,7 +4,7 @@ Detect market regimes in the S&P 500 using FFT-smoothed trend returns +
 
 Output
 ------
-CSV  markov_fft_main_trend.csv  עם עמודה:
+CSV  markov_fft_main_trend.csv  with column:
     regime_signal_fftfeat  ∈ {+1, 0, -1}
 """
 

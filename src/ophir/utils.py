@@ -81,7 +81,7 @@ def calculate_beta_index(df: pd.DataFrame, window: int = 250):
 def split_dataframe_by_dates(
     df: pd.DataFrame,
     d1: str = '1.1.2013',
-    d2: str = '1.1.2019',
+    d2: str = '1.1.2024',
     d3: str = '1.1.2022',
     d4: str = '1.1.2024'
 ) -> tuple[pd.DataFrame, pd.DataFrame, pd.DataFrame]:
